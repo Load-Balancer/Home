@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Load Balancer</title>
+    <link rel="stylesheet" href="Landing_styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Londrina+Solid:wght@100;300;400;900&family=Bayon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Welcome, Polymaths, Visionaries, and Chronic Tab-Openers.</h1>
+    <h2>
+      Inspiration hits you at terminal velocity. Too many epic ideas. Too little
+      RAM.
+    </h2>
+    <h3>
+      Don't let your best thoughts vanish into the void just because your brain
+      is overflowing.
+    </h3>
+    <button
+      onclick="
+        let s = document.getElementById('pop-sound');
+        s.currentTime = 0;
+        s.play();
+        window.open('https://load-balancer.github.io/version2/', '_blank');
+      "
+    >
+      Go to Loadbalancer
+    </button>
+    <img src="images\undraw_ideas_vn7a.svg" alt="" />
+    <h4>Loadbalancer.</h4>
+    <h2>
+      The traffic controller for your hyperactive brain. Drop your chaotic
+      thoughts into three clean tracks before you short-circuit:
+      <ul class="feature-list">
+        <li>💡 Ideas: Future history-changers.</li>
+        <li>✅ Tasks: Real-world execution.</li>
+        <li>
+          📚 Courses: For when the 2 AM Shiny Object Syndrome tells you to
+          master medieval BOOKBINDING
+        </li>
+      </ul>
+      <div class="validation-box">
+        <button
+          class="like-btn"
+          onclick="
+            let s = document.getElementById('pop-sound');
+            s.currentTime = 0;
+            s.play();
+            registerLike();
+          "
+        >
+          👆 I needed this yesterday!
+        </button>
+        <p class="like-counter">
+          <span id="counter-number">1</span> polymaths agree
+        </p>
+      </div>
+    </h2>
+    <img src="images\undraw_thought-process_ze2r.svg" alt="" />
+    <h4>Help Us Build the Mothership</h4>
+    <h2>
+      Have a feature request? Found a bug? Want to tell us your latest wild
+      epiphany? Tap the button below to fill out our feedback form. Let’s build
+      the future of mental de-cluttering together
+    </h2>
+    <button
+      onclick="
+        let s = document.getElementById('pop-sound');
+        s.currentTime = 0;
+        s.play();
+        window.open('https://forms.gle/nqTPN2rrvChYmP5n7', '_blank');
+      "
+    >
+      FEEDBACK FORM
+    </button>
+    <audio id="pop-sound" src="plop.m4a" preload="auto"></audio>
+    <script>
+      function registerLike() {
+        const counterEl = document.getElementById("counter-number");
+        let currentCount = parseInt(counterEl.innerText);
+
+        // Increment the number on screen
+        counterEl.innerText = currentCount + 1;
+
+        // Optional aesthetic flex: Change button text once they click it
+        const btn = document.querySelector(".like-btn");
+        btn.innerText = "🚀 Welcome to the club!";
+        btn.style.borderColor = "#1a434d";
+        btn.style.color = "#1a434d";
+        btn.disabled = true; // Prevents spamming the sound effect track loop
+      }
+    </script>
+  </body>
+</html>

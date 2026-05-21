@@ -1,0 +1,129 @@
+body {
+  background-color: #499ea9;
+  color: rgb(253, 245, 235);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  max-width: 450px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 30px;
+  font-family: "BBH Bogle", sans-serif;
+  letter-spacing: 0.025em;
+  font-weight: 100;
+  font-style: normal;
+}
+h2 {
+  font-size: 21px;
+  font-family: "Bayon", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #014656;
+}
+h3 {
+  font-size: 24px;
+  font-family: "Bayon", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+h4 {
+  font-size: 30px;
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.feature-list {
+  list-style-type: none; /* Removes the bullet dots */
+  padding-left: 0; /* Removes the default left indent where the dots used to sit */
+}
+
+/* Optional: Add a little breathing room between the items since the bullets are gone */
+.feature-list li {
+  margin-bottom: 10px;
+}
+img {
+  width: 60%;
+}
+button {
+  /* 1. Dimensions (from 174 Hug x 49 Hug and padding properties) */
+  padding: 15px 12px; /* Figma Top/Bottom: 15px, Left/Right: 12px */
+  min-width: 174px; /* Matches your explicit component width box */
+
+  /* 2. Fill (Hex code #014656 from the Fill section) */
+  background-color: #014656;
+
+  /* 3. Stroke (Hex #FFFFFF, Inside, Weight: 1 from the Stroke section) */
+  border: 1px solid #ffffff;
+
+  /* 4. Corner Radius (Value 15 from the Appearance section) */
+  border-radius: 15px;
+
+  /* 5. Typography settings to match look and color */
+  color: #ffffff;
+  font-family:
+    "Londrina Solid", sans-serif; /* Replace with your specific font family if using a different one */
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  /* 6. Text centering & interaction essentials */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease;
+}
+
+button:active {
+  box-shadow: none; /* Removes the shadow completely */
+  transform: translateY(
+    3px
+  ); /* Optional: moves button down slightly to mimic a real click */
+}
+
+/* Container for the validation section */
+.validation-box {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The specialized layout for this specific button */
+.like-btn {
+  background-color: transparent; /* Clear fill to separate it from the main CTA style */
+  color: #ffffff;
+  font-family: "Londrina Solid", sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px dashed #ffffff; /* Cool dashed border to show it's a dynamic zone */
+  cursor: pointer;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px; /* Tighter gap to the counter text */
+  transition: all 0.1s ease;
+}
+
+.like-btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+/* Counter text below the button */
+.like-counter {
+  font-size: 1rem;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+#counter-number {
+  font-weight: 900;
+  color: #1a434d; /* Uses your button dark teal to make the number pop beautifully */
+}
