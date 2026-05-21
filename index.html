@@ -45,22 +45,7 @@
           master medieval BOOKBINDING
         </li>
       </ul>
-      <div class="validation-box">
-        <button
-          class="like-btn"
-          onclick="
-            let s = document.getElementById('pop-sound');
-            s.currentTime = 0;
-            s.play();
-            registerLike();
-          "
-        >
-          👆 I needed this yesterday!
-        </button>
-        <p class="like-counter">
-          <span id="counter-number">1</span> polymaths agree
-        </p>
-      </div>
+      
     </h2>
     <img src="images\undraw_thought-process_ze2r.svg" alt="" />
     <h4>Help Us Build the Mothership</h4>
@@ -80,21 +65,6 @@
       FEEDBACK FORM
     </button>
     <audio id="pop-sound" src="plop.m4a" preload="auto"></audio>
-    <script>
-      function registerLike() {
-        const counterEl = document.getElementById("counter-number");
-        let currentCount = parseInt(counterEl.innerText);
-
-        // Increment the number on screen
-        counterEl.innerText = currentCount + 1;
-
-        // Optional aesthetic flex: Change button text once they click it
-        const btn = document.querySelector(".like-btn");
-        btn.innerText = "🚀 Welcome to the club!";
-        btn.style.borderColor = "#1a434d";
-        btn.style.color = "#1a434d";
-        btn.disabled = true; // Prevents spamming the sound effect track loop
-      }
-    </script>
+    
   </body>
 </html>
